@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-story: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --color-paper: #f6efe2;
+  --color-paper-deep: #ead9bd;
+  --color-ink: #2b211b;
+  --color-ink-soft: #6b5a4c;
+  --color-binding: #7a3e2b;
+}
+
+html,
+body {
+  background: #efe6d6;
+  color: var(--color-ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #1d1814;
+  }
+}
+
+/* Page turn: the new right-hand page swings in from the spine. */
+@keyframes turn-in {
+  from {
+    transform: perspective(1600px) rotateY(-80deg);
+    opacity: 0.2;
+  }
+  to {
+    transform: perspective(1600px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes turn-back {
+  from {
+    transform: perspective(1600px) rotateY(80deg);
+    opacity: 0.2;
+  }
+  to {
+    transform: perspective(1600px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+.turn-forward {
+  transform-origin: left center;
+  animation: turn-in 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.turn-backward {
+  transform-origin: right center;
+  animation: turn-back 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .turn-forward,
+  .turn-backward {
+    animation: none;
+  }
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.85;
+  padding: 0.08em 0.1em 0 0;
+  font-weight: 600;
+  color: var(--color-binding);
+}
