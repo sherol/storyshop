@@ -61,7 +61,7 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-3">
           <BookOpen className="text-binding" aria-hidden />
           <div className="mr-auto">
-            <h1 className="font-story text-2xl leading-none font-semibold">Storyshop</h1>
+            <h1 className="font-story text-2xl leading-none font-semibold">StoryShop</h1>
             <p className="text-sm text-ink-soft">
               Set the constraints. Spin out tellings. Write the rest together.
             </p>

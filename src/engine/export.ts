@@ -12,7 +12,7 @@ function slug(name: string): string {
 export function toAspSpec(spec: StorySpec): string {
   const atom = new Map(spec.characters.map((c) => [c.id, slug(c.name)]));
   const a = (id: string) => atom.get(id) ?? slug(id);
-  const lines: string[] = [`% ${spec.title} - exported from Storyshop`, ''];
+  const lines: string[] = [`% ${spec.title} - exported from StoryShop`, ''];
 
   for (const c of spec.characters) lines.push(`person(${a(c.id)}).`);
   lines.push('', '% ============================================', '');

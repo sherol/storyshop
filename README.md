@@ -1,11 +1,11 @@
-# Storyshop
+# StoryShop
 
 Set story constraints, spin out _n_ tellings that satisfy them, then co-write the one you like.
 Each telling is staged like a picture book.
 
-Storyshop builds on [rolemodel](https://github.com/ffpaladin/rolemodel) (the "Kaleidoscope" /
+StoryShop builds on [rolemodel](https://github.com/ffpaladin/rolemodel) (the "Kaleidoscope" /
 "Tell me a story" project). That project wrote story constraints in Answer Set Programming,
-had clingo find answer sets, and showed each one as a comic with `impress.js`. Storyshop keeps
+had clingo find answer sets, and showed each one as a comic with `impress.js`. StoryShop keeps
 the idea and runs it entirely in the browser:
 
 1. **The author fixes what visibly happens.** Characters, scenes, and the events in each scene

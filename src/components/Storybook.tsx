@@ -147,7 +147,7 @@ export function Storybook({ variation, kept, onChange, onClose, onKeep, onPin, o
             }`}
           >
             <p className="text-xs tracking-[0.2em] text-ink-soft uppercase">
-              {page.kind === 'cover' ? 'Storyshop presents' : page.title}
+              {page.kind === 'cover' ? 'StoryShop presents' : page.title}
             </p>
 
             {page.kind === 'cover' ? (
